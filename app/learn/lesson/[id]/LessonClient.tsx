@@ -28,13 +28,13 @@ const lessons: Record<number, {
     title: 'The Football',
     emoji: '⚽',
     slides: [
-      { heading: 'The Most Famous Ball!', content: 'The football (or soccer ball) is round and black and white. It\'s the most recognised sports ball in the entire world!', visual: '⚽' },
+      { heading: 'The Most Famous Ball!', content: 'The football is round and black and white. It\'s the most recognised sports ball in the entire world!', visual: '⚽' },
       { heading: 'What\'s Inside?', content: 'A football is made of leather on the outside and is filled with air on the inside. The air makes it bouncy and easy to kick!', visual: '💨' },
-      { heading: 'How Heavy is it?', content: 'A football weighs about 450 grams — about the same as a big chocolate bar! It needs to be light enough to kick high but heavy enough to control.', visual: '⚖️' },
-      { heading: 'Black and White Pattern', content: 'The classic football has 32 panels — 20 white hexagons and 12 black pentagons sewn together. The pattern helps players see the ball spin!', visual: '🔵' },
+      { heading: 'How Heavy is it?', content: 'A football weighs about 450 grams — about the same as a big chocolate bar!', visual: '⚖️' },
+      { heading: 'Black and White Pattern', content: 'The classic football has 32 panels — 20 white hexagons and 12 black pentagons sewn together!', visual: '🔵' },
     ],
     quiz: [
-      { question: 'What shape is a football?', options: ['Square', 'Oval', 'Round ⚽', 'Triangle'], correct: 2, explanation: 'A football is perfectly round — that\'s what makes it roll and bounce perfectly!' },
+      { question: 'What shape is a football?', options: ['Square', 'Oval', 'Round ⚽', 'Triangle'], correct: 2, explanation: 'A football is perfectly round!' },
       { question: 'What is inside a football?', options: ['Water 💧', 'Sand', 'Air 💨', 'Cotton'], correct: 2, explanation: 'Footballs are filled with air — that\'s what makes them bounce!' },
       { question: 'How many panels does a classic football have?', options: ['10', '20', '32 ⚽', '50'], correct: 2, explanation: 'A classic football has 32 panels — 20 white and 12 black!' },
     ]
@@ -44,9 +44,9 @@ const lessons: Record<number, {
     emoji: '🥅',
     slides: [
       { heading: 'What is a Goal?', content: 'A goal is how teams score points in football! When the ball crosses the goal line inside the net, that\'s a GOAL! 🎉', visual: '🥅' },
-      { heading: 'How Big is a Goal?', content: 'A football goal is 7.32 metres wide and 2.44 metres tall. That\'s about as wide as a big car and taller than most adults!', visual: '📏' },
+      { heading: 'How Big is a Goal?', content: 'A football goal is 7.32 metres wide and 2.44 metres tall. That\'s taller than most adults!', visual: '📏' },
       { heading: 'Who Protects the Goal?', content: 'The GOALKEEPER is the special player who protects the goal. They are the only player allowed to use their hands!', visual: '🧤' },
-      { heading: 'How Do You Score?', content: 'You can score with your feet, head, or any part of your body EXCEPT your hands and arms (unless you\'re the goalkeeper)!', visual: '⚽' },
+      { heading: 'How Do You Score?', content: 'You can score with your feet, head, or any part of your body EXCEPT your hands!', visual: '⚽' },
     ],
     quiz: [
       { question: 'What happens when the ball goes into the net?', options: ['A foul is called', 'A GOAL is scored! 🎉', 'The game stops forever', 'Nothing happens'], correct: 1, explanation: 'When the ball crosses the goal line inside the net, a goal is scored!' },
@@ -59,9 +59,9 @@ const lessons: Record<number, {
     emoji: '🎯',
     slides: [
       { heading: 'Scoring Goals!', content: 'The whole point of football is to score more goals than the other team! The team with the most goals at the end WINS! 🏆', visual: '🏆' },
-      { heading: 'Shooting', content: 'To score, you need to SHOOT the ball into the goal. Players use the inside of their foot for accuracy and the top of their foot for power!', visual: '🦶' },
+      { heading: 'Shooting', content: 'To score, you need to SHOOT the ball into the goal. Players use the inside of their foot for accuracy!', visual: '🦶' },
       { heading: 'Headers', content: 'You can also score with your head! When a player jumps and hits the ball with their forehead, it\'s called a HEADER!', visual: '🤯' },
-      { heading: 'Volleys', content: 'A VOLLEY is when you kick the ball before it hits the ground. Volleys can be incredibly powerful and exciting!', visual: '⚡' },
+      { heading: 'Volleys', content: 'A VOLLEY is when you kick the ball before it hits the ground. Volleys can be incredibly powerful!', visual: '⚡' },
     ],
     quiz: [
       { question: 'How does a team win in football?', options: ['By running fastest', 'By scoring more goals 🏆', 'By having best uniforms', 'By biggest team'], correct: 1, explanation: 'The team that scores the most goals wins the match!' },
@@ -73,59 +73,59 @@ const lessons: Record<number, {
     title: 'The Goalkeeper',
     emoji: '🧤',
     slides: [
-      { heading: 'The Last Line of Defence!', content: 'The Goalkeeper (or GK) is the most unique player on the team. Their job is to stop the other team from scoring!', visual: '🧤' },
-      { heading: 'Special Powers!', content: 'The goalkeeper is the ONLY player allowed to use their hands — but only inside the penalty box. Outside the box, they must use their feet!', visual: '🙌' },
-      { heading: 'What do Goalkeepers Wear?', content: 'Goalkeepers wear special gloves to help them catch and hold the ball. They also wear a different colour shirt so everyone can tell them apart!', visual: '🧤' },
-      { heading: 'Famous Goalkeepers', content: 'Some of the most famous goalkeepers include Manuel Neuer, Alisson Becker and Gianluigi Buffon. They are heroes of their teams!', visual: '⭐' },
+      { heading: 'The Last Line of Defence!', content: 'The Goalkeeper is the most unique player on the team. Their job is to stop the other team from scoring!', visual: '🧤' },
+      { heading: 'Special Powers!', content: 'The goalkeeper is the ONLY player allowed to use their hands — but only inside the penalty box!', visual: '🙌' },
+      { heading: 'What do Goalkeepers Wear?', content: 'Goalkeepers wear special gloves to help them catch and hold the ball. They also wear a different colour shirt!', visual: '🧤' },
+      { heading: 'Famous Goalkeepers', content: 'Some of the most famous goalkeepers include Manuel Neuer, Alisson Becker and Gianluigi Buffon!', visual: '⭐' },
     ],
     quiz: [
       { question: 'What is special about the goalkeeper?', options: ['They score all goals', 'They can use their hands 🙌', 'They run the fastest', 'They wear no shoes'], correct: 1, explanation: 'The goalkeeper is the only player allowed to use their hands!' },
       { question: 'Where can the goalkeeper use their hands?', options: ['Everywhere', 'Nowhere', 'Inside the penalty box 🟦', 'Only at corners'], correct: 2, explanation: 'The goalkeeper can only use their hands inside their own penalty box!' },
-      { question: 'Why do goalkeepers wear different coloured shirts?', options: ['It looks cool', 'So everyone can tell them apart 🧤', 'It makes them faster', 'It\'s the rules for scoring'], correct: 1, explanation: 'Goalkeepers wear a different colour so players and referees can easily identify them!' },
+      { question: 'Why do goalkeepers wear different coloured shirts?', options: ['It looks cool', 'So everyone can tell them apart 🧤', 'It makes them faster', 'Rules for scoring'], correct: 1, explanation: 'Goalkeepers wear a different colour so players and referees can identify them!' },
     ]
   },
   6: {
     title: 'Defenders',
     emoji: '🛡️',
     slides: [
-      { heading: 'The Wall of Defence!', content: 'Defenders are players whose main job is to STOP the other team from scoring. They stand between the attackers and their goalkeeper!', visual: '🛡️' },
-      { heading: 'Types of Defenders', content: 'There are Centre-Backs (in the middle) and Full-Backs (on the sides). Centre-backs are usually tall and strong, full-backs are fast!', visual: '↔️' },
-      { heading: 'What do Defenders do?', content: 'Defenders tackle opponents, head away crosses, block shots and pass the ball safely to their teammates. They are the backbone of the team!', visual: '💪' },
-      { heading: 'Famous Defenders', content: 'Virgil van Dijk, Sergio Ramos and Paolo Maldini are legendary defenders known for their strength, reading of the game and leadership!', visual: '⭐' },
+      { heading: 'The Wall of Defence!', content: 'Defenders are players whose main job is to STOP the other team from scoring!', visual: '🛡️' },
+      { heading: 'Types of Defenders', content: 'There are Centre-Backs in the middle and Full-Backs on the sides. Centre-backs are tall and strong, full-backs are fast!', visual: '↔️' },
+      { heading: 'What do Defenders do?', content: 'Defenders tackle opponents, head away crosses, block shots and pass safely to teammates!', visual: '💪' },
+      { heading: 'Famous Defenders', content: 'Virgil van Dijk, Sergio Ramos and Paolo Maldini are legendary defenders!', visual: '⭐' },
     ],
     quiz: [
       { question: 'What is the main job of a defender?', options: ['Score goals', 'Stop other team scoring 🛡️', 'Take corners', 'Referee the game'], correct: 1, explanation: 'Defenders main job is to prevent the opposition from scoring!' },
       { question: 'What are full-backs known for?', options: ['Being very tall', 'Being very fast ⚡', 'Having big hands', 'Scoring penalties'], correct: 1, explanation: 'Full-backs play on the sides and are usually very fast!' },
-      { question: 'What does a defender do when the ball comes in from the side?', options: ['Run away', 'Head it away 🥅', 'Catch it', 'Sit down'], correct: 1, explanation: 'Defenders head away crosses to clear the danger from their goal!' },
+      { question: 'What does a defender do when the ball comes in from the side?', options: ['Run away', 'Head it away 🥅', 'Catch it', 'Sit down'], correct: 1, explanation: 'Defenders head away crosses to clear the danger!' },
     ]
   },
   7: {
     title: 'Midfielders',
     emoji: '🔄',
     slides: [
-      { heading: 'The Engine of the Team!', content: 'Midfielders play in the MIDDLE of the pitch. They connect the defenders and the attackers — they are the most important part of the team!', visual: '🔄' },
-      { heading: 'Types of Midfielders', content: 'There are defensive midfielders (protect the defence), central midfielders (control the game) and attacking midfielders (create goals)!', visual: '⚡' },
-      { heading: 'What do Midfielders do?', content: 'Midfielders pass the ball, tackle opponents, run huge distances and control the pace of the game. They often run over 10km in a single match!', visual: '🏃' },
-      { heading: 'Famous Midfielders', content: 'Luka Modrić, Kevin De Bruyne and Andrea Pirlo are legendary midfielders known for their passing, vision and energy!', visual: '⭐' },
+      { heading: 'The Engine of the Team!', content: 'Midfielders play in the MIDDLE of the pitch. They connect the defenders and the attackers!', visual: '🔄' },
+      { heading: 'Types of Midfielders', content: 'There are defensive midfielders, central midfielders and attacking midfielders!', visual: '⚡' },
+      { heading: 'What do Midfielders do?', content: 'Midfielders pass the ball, tackle opponents and often run over 10km in a single match!', visual: '🏃' },
+      { heading: 'Famous Midfielders', content: 'Luka Modrić, Kevin De Bruyne and Andrea Pirlo are legendary midfielders!', visual: '⭐' },
     ],
     quiz: [
-      { question: 'Where do midfielders play?', options: ['In goal', 'In the middle of the pitch 🔄', 'Only on the left side', 'Behind the goal'], correct: 1, explanation: 'Midfielders play in the middle of the pitch, connecting defence and attack!' },
-      { question: 'How far can a midfielder run in one match?', options: ['1 km', '5 km', 'Over 10 km 🏃', '50 km'], correct: 2, explanation: 'Midfielders can run over 10km in a single match — they are super fit!' },
-      { question: 'What do attacking midfielders do?', options: ['Only defend', 'Create and score goals ⚽', 'Stand still', 'Only pass backwards'], correct: 1, explanation: 'Attacking midfielders create chances and score goals for their team!' },
+      { question: 'Where do midfielders play?', options: ['In goal', 'In the middle of the pitch 🔄', 'Only on the left side', 'Behind the goal'], correct: 1, explanation: 'Midfielders play in the middle, connecting defence and attack!' },
+      { question: 'How far can a midfielder run in one match?', options: ['1 km', '5 km', 'Over 10 km 🏃', '50 km'], correct: 2, explanation: 'Midfielders can run over 10km in a single match!' },
+      { question: 'What do attacking midfielders do?', options: ['Only defend', 'Create and score goals ⚽', 'Stand still', 'Only pass backwards'], correct: 1, explanation: 'Attacking midfielders create chances and score goals!' },
     ]
   },
   8: {
     title: 'Forwards',
     emoji: '⚡',
     slides: [
-      { heading: 'The Goal Scorers!', content: 'Forwards (also called strikers or attackers) have the most exciting job — SCORING GOALS! They play at the front of the team!', visual: '⚡' },
-      { heading: 'Types of Forwards', content: 'Centre-forwards play in the middle and score most goals. Wingers play on the sides and are incredibly fast. They cross the ball for strikers!', visual: '🏃' },
-      { heading: 'Skills of a Forward', content: 'Forwards need great shooting, heading, speed and the ability to stay calm under pressure. Scoring in front of thousands of fans takes nerves of steel!', visual: '🎯' },
-      { heading: 'Famous Forwards', content: 'Lionel Messi, Cristiano Ronaldo and Erling Haaland are the most famous forwards in the world, known for their incredible goal-scoring records!', visual: '⭐' },
+      { heading: 'The Goal Scorers!', content: 'Forwards have the most exciting job — SCORING GOALS! They play at the front of the team!', visual: '⚡' },
+      { heading: 'Types of Forwards', content: 'Centre-forwards score most goals. Wingers play on the sides and are incredibly fast!', visual: '🏃' },
+      { heading: 'Skills of a Forward', content: 'Forwards need great shooting, heading, speed and the ability to stay calm under pressure!', visual: '🎯' },
+      { heading: 'Famous Forwards', content: 'Lionel Messi, Cristiano Ronaldo and Erling Haaland are the most famous forwards in the world!', visual: '⭐' },
     ],
     quiz: [
-      { question: 'What is the main job of a forward?', options: ['Stop goals', 'Score goals ⚡', 'Take goal kicks', 'Referee decisions'], correct: 1, explanation: 'Forwards are the goal scorers — their job is to put the ball in the net!' },
-      { question: 'What are wingers known for?', options: ['Being the tallest', 'Being incredibly fast 🏃', 'Having the best gloves', 'Standing still'], correct: 1, explanation: 'Wingers play on the sides and use their speed to beat defenders!' },
+      { question: 'What is the main job of a forward?', options: ['Stop goals', 'Score goals ⚡', 'Take goal kicks', 'Referee decisions'], correct: 1, explanation: 'Forwards are the goal scorers!' },
+      { question: 'What are wingers known for?', options: ['Being the tallest', 'Being incredibly fast 🏃', 'Having the best gloves', 'Standing still'], correct: 1, explanation: 'Wingers use their speed to beat defenders!' },
       { question: 'Which of these is a famous forward?', options: ['Manuel Neuer', 'Virgil van Dijk', 'Erling Haaland ⭐', 'Luka Modrić'], correct: 2, explanation: 'Erling Haaland is one of the most feared strikers in the world!' },
     ]
   },
@@ -143,15 +143,26 @@ export default function LessonClient({ id }: { id: string }) {
   const [showExplanation, setShowExplanation] = useState(false);
 
   useEffect(() => {
-  if (phase === 'complete') {
-    const userId = localStorage.getItem('playsmart_user_id') || 
-      (() => {
-        const id = 'user_' + Math.random().toString(36).substr(2, 9);
-        localStorage.setItem('playsmart_user_id', id);
-        return id;
-      })();
+    if (phase !== 'complete') return;
 
-    // Save to Supabase
+    const existingId = localStorage.getItem('playsmart_user_id');
+    const userId = existingId || 'user_' + Math.random().toString(36).substr(2, 9);
+    if (!existingId) localStorage.setItem('playsmart_user_id', userId);
+
+    const prevXp = parseInt(localStorage.getItem('playsmart_xp') || '0');
+    const prevStreak = parseInt(localStorage.getItem('playsmart_streak') || '0');
+    const newXp = prevXp + 50;
+    const newStreak = prevStreak + 1;
+
+    localStorage.setItem('playsmart_xp', String(newXp));
+    localStorage.setItem('playsmart_streak', String(newStreak));
+
+    const completed = JSON.parse(localStorage.getItem('playsmart_completed') || '[]');
+    if (!completed.includes(lessonId)) {
+      completed.push(lessonId);
+      localStorage.setItem('playsmart_completed', JSON.stringify(completed));
+    }
+
     supabase.from('user_progress').upsert({
       user_id: userId,
       lesson_id: lessonId,
@@ -160,27 +171,11 @@ export default function LessonClient({ id }: { id: string }) {
 
     supabase.from('user_stats').upsert({
       user_id: userId,
-      xp: 0,
-      streak: 0,
-    }, { onConflict: 'user_id' }).then(() => {
-      supabase.rpc('increment_stats', { 
-        p_user_id: userId, 
-        p_xp: 50 
-      }).then(() => {});
-    });
+      xp: newXp,
+      streak: newStreak,
+    }, { onConflict: 'user_id' }).then(() => {});
 
-    // Also save locally as backup
-    const completed = JSON.parse(localStorage.getItem('playsmart_completed') || '[]');
-    if (!completed.includes(lessonId)) {
-      completed.push(lessonId);
-      localStorage.setItem('playsmart_completed', JSON.stringify(completed));
-    }
-    const xp = parseInt(localStorage.getItem('playsmart_xp') || '0');
-    localStorage.setItem('playsmart_xp', String(xp + 50));
-    const streak = parseInt(localStorage.getItem('playsmart_streak') || '0');
-    localStorage.setItem('playsmart_streak', String(streak + 1));
-  }
-}, [phase, lessonId, correct]);
+  }, [phase]);
 
   if (!lesson) return (
     <main className="min-h-screen bg-gray-950 text-white flex items-center justify-center">
@@ -243,7 +238,9 @@ export default function LessonClient({ id }: { id: string }) {
         {phase === 'quiz' && (
           <div className="flex-1 flex flex-col">
             <div className="mb-6">
-              <p className="text-orange-400 font-bold text-sm uppercase tracking-wide mb-2">Question {quizIndex + 1} of {lesson.quiz.length}</p>
+              <p className="text-orange-400 font-bold text-sm uppercase tracking-wide mb-2">
+                Question {quizIndex + 1} of {lesson.quiz.length}
+              </p>
               <h2 className="text-2xl font-black text-white">{lesson.quiz[quizIndex].question}</h2>
             </div>
             <div className="flex flex-col gap-3 flex-1">
@@ -252,10 +249,13 @@ export default function LessonClient({ id }: { id: string }) {
                   key={i}
                   onClick={() => handleAnswer(i)}
                   className={`w-full p-4 rounded-2xl border-2 text-left font-bold text-base transition ${
-                    selected === null ? 'border-gray-700 bg-gray-800 hover:border-orange-500 hover:bg-gray-700'
-                    : i === lesson.quiz[quizIndex].correct ? 'border-green-400 bg-green-500/20 text-green-400'
-                    : selected === i ? 'border-red-400 bg-red-500/20 text-red-400'
-                    : 'border-gray-700 bg-gray-800 opacity-50'
+                    selected === null
+                      ? 'border-gray-700 bg-gray-800 hover:border-orange-500 hover:bg-gray-700'
+                      : i === lesson.quiz[quizIndex].correct
+                      ? 'border-green-400 bg-green-500/20 text-green-400'
+                      : selected === i
+                      ? 'border-red-400 bg-red-500/20 text-red-400'
+                      : 'border-gray-700 bg-gray-800 opacity-50'
                   }`}
                 >
                   <span className="mr-3">{['🅰️', '🅱️', '🅲', '🅳'][i]}</span>
