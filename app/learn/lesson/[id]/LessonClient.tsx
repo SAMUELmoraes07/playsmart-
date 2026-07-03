@@ -258,8 +258,8 @@ export default function LessonClient({ id }: { id: string }) {
                       : 'border-gray-700 bg-gray-800 opacity-50'
                   }`}
                 >
-                  <span className="mr-3">{['🅰️', '🅱️', '🅲', '🅳'][i]}</span>
-                  {option}
+                  <span className="mr-3 text-gray-500 font-black">{['A', 'B', 'C', 'D'][i]}.</span>
+                  {option.replace(/[\u{1F300}-\u{1FAD6}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/gu, '').trim()}
                 </button>
               ))}
             </div>

@@ -27,7 +27,6 @@ export default function LearnPage() {
 
   useEffect(() => {
     const userId = localStorage.getItem('playsmart_user_id');
-
     if (userId) {
       supabase
         .from('user_progress')
@@ -36,30 +35,25 @@ export default function LearnPage() {
         .then(({ data }) => {
           if (data) setCompleted(data.map((d: any) => d.lesson_id));
         });
-
       supabase
         .from('user_stats')
         .select('xp, streak')
         .eq('user_id', userId)
         .single()
         .then(({ data }) => {
-          if (data) {
-            setXp(data.xp);
-            setStreak(data.streak);
-          }
+          if (data) { setXp(data.xp); setStreak(data.streak); }
         });
     } else {
       const c = JSON.parse(localStorage.getItem('playsmart_completed') || '[]');
       const x = parseInt(localStorage.getItem('playsmart_xp') || '0');
       const s = parseInt(localStorage.getItem('playsmart_streak') || '0');
-      setCompleted(c);
-      setXp(x);
-      setStreak(s);
+      setCompleted(c); setXp(x); setStreak(s);
     }
   }, []);
 
   const allLessons = [1, 2, 3, 4, 5, 6, 7, 8];
   const firstIncomplete = allLessons.find(id => !completed.includes(id));
+  const completedCount = completed.length;
 
   const units: Unit[] = [
     {
@@ -104,11 +98,9 @@ export default function LearnPage() {
     },
   ];
 
-  const totalLessons = 16;
-  const completedCount = completed.length;
-
   return (
     <main className="min-h-screen bg-gray-950 text-white">
+      {/* Navbar */}
       <div className="bg-gray-900 border-b border-gray-800 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl">⚽</span>
@@ -122,6 +114,7 @@ export default function LearnPage() {
       </div>
 
       <div className="max-w-2xl mx-auto px-6 py-8">
+        {/* Sport selector */}
         <div className="flex gap-3 mb-8 overflow-x-auto pb-2">
           {[
             { emoji: '⚽', label: 'Football', active: true },
@@ -134,16 +127,19 @@ export default function LearnPage() {
           ))}
         </div>
 
+        {/* Progress bar */}
         <div className="bg-gray-900 border border-gray-800 rounded-2xl p-4 mb-8">
           <div className="flex items-center justify-between mb-2">
             <span className="text-white font-bold text-sm">⚽ Football Journey</span>
-            <span className="text-orange-400 font-black text-sm">{completedCount}/{totalLessons} lessons</span>
+            <span className="text-orange-400 font-black text-sm">{completedCount}/16 lessons</span>
           </div>
           <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full transition-all duration-500" style={{ width: `${(completedCount / totalLessons) * 100}%` }} />
+            <div className="h-full bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full transition-all duration-500"
+              style={{ width: `${(completedCount / 16) * 100}%` }} />
           </div>
         </div>
 
+        {/* Units */}
         <div className="flex flex-col gap-8">
           {units.map((unit) => (
             <div key={unit.id}>
@@ -155,11 +151,10 @@ export default function LearnPage() {
                     <p className="text-white font-black text-lg">{unit.title}</p>
                   </div>
                 </div>
-                {unit.locked ? (
-                  <span className="text-2xl">🔒</span>
-                ) : (
-                  <span className="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full">{unit.lessons.length} lessons</span>
-                )}
+                {unit.locked
+                  ? <span className="text-2xl">🔒</span>
+                  : <span className="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full">{unit.lessons.length} lessons</span>
+                }
               </div>
 
               {!unit.locked && (
@@ -170,9 +165,11 @@ export default function LearnPage() {
                       <Link
                         href={lesson.done || lesson.current ? `/learn/lesson/${lesson.id}` : '#'}
                         className={`relative flex items-center justify-center w-20 h-20 rounded-full border-4 transition hover:scale-110 ${
-                          lesson.done ? 'bg-green-500 border-green-400 shadow-lg shadow-green-500/30'
-                          : lesson.current ? 'bg-orange-500 border-orange-400 shadow-lg shadow-orange-500/50 animate-pulse'
-                          : 'bg-gray-800 border-gray-700 opacity-50 cursor-not-allowed'
+                          lesson.done
+                            ? 'bg-green-500 border-green-400 shadow-lg shadow-green-500/30'
+                            : lesson.current
+                            ? 'bg-orange-500 border-orange-400 shadow-lg shadow-orange-500/50 animate-pulse'
+                            : 'bg-gray-800 border-gray-700 opacity-50 cursor-not-allowed'
                         }`}
                       >
                         <span className="text-3xl">{lesson.done ? '✅' : lesson.emoji}</span>
@@ -182,7 +179,9 @@ export default function LearnPage() {
                           </div>
                         )}
                       </Link>
-                      <p className={`text-xs font-bold text-center mt-2 max-w-[80px] ${lesson.current ? 'text-orange-400' : lesson.done ? 'text-green-400' : 'text-gray-600'}`}>
+                      <p className={`text-xs font-bold text-center mt-2 max-w-[80px] ${
+                        lesson.current ? 'text-orange-400' : lesson.done ? 'text-green-400' : 'text-gray-600'
+                      }`}>
                         {lesson.title}
                       </p>
                     </div>
@@ -192,6 +191,38 @@ export default function LearnPage() {
             </div>
           ))}
         </div>
+
+        {/* BE THE PLAYER — unlocks after 4 lessons */}
+        <div className={`mt-10 rounded-2xl border-2 p-6 text-center transition-all ${
+          completedCount >= 4
+            ? 'bg-orange-500/10 border-orange-500/50 hover:border-orange-500'
+            : 'bg-gray-900/50 border-gray-800 opacity-60'
+        }`}>
+          {completedCount >= 4 ? (
+            <Link href="/be-the-player">
+              <div className="text-5xl mb-3 animate-bounce">⚽</div>
+              <h3 className="text-white font-black text-xl mb-1">Be The Player!</h3>
+              <p className="text-gray-400 text-sm mb-4">
+                Step into the boots of Messi, Ronaldo or Mbappé and make match decisions!
+              </p>
+              <div className="bg-orange-500 hover:bg-orange-400 text-white font-black px-8 py-3 rounded-xl transition inline-block">
+                Play Now! 🎮
+              </div>
+            </Link>
+          ) : (
+            <div>
+              <div className="text-5xl mb-3">🔒</div>
+              <h3 className="text-white font-black text-xl mb-1">Be The Player!</h3>
+              <p className="text-gray-400 text-sm mb-3">
+                Complete 4 lessons to unlock this mode!
+              </p>
+              <div className="bg-gray-800 text-gray-500 font-black px-8 py-3 rounded-xl inline-block">
+                {completedCount}/4 lessons done
+              </div>
+            </div>
+          )}
+        </div>
+
       </div>
     </main>
   );
